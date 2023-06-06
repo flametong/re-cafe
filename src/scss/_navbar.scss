@@ -1,0 +1,97 @@
+$green-main: rgb(49, 196, 141);
+$gray-main: #333;
+$gray-lighter: #726c6c;
+$gray-light: #CFCFCF;
+
+.navbar {
+    width: 100%;
+    height: 5rem;
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eff2ed;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    &__list {
+        width: 100rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__element {
+        display: flex;
+        height: 100%;
+        a {
+            display: flex;
+            align-items: center;
+            color: $gray-lighter;
+            height: 100%;
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            padding: 0 3.8rem;
+            transition: 0.15s;
+        }
+
+        a:hover {
+            color: $green-main;
+            background-color: #e2e9dd;
+        }
+    }
+
+    /* 1000px / 16px = 62.5em */
+    @media only screen and (max-width: 62.5em) {
+        .navbar {
+            &__element {
+                a {
+                    letter-spacing: 0;
+                    padding: 0 2.4rem;
+                }
+            }
+        }
+    }
+
+    /* 750px / 16px = 46.875em */
+    @media only screen and (max-width: 46.875em) {
+        .navbar {
+            &__element {
+                a {
+                    letter-spacing: 0;
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+
+    /* 550px / 16px = 34.375em */
+    @media only screen and (max-width: 34.375em) {
+        .navbar {
+            &__element {
+                a {
+                    font-size: 1.3rem;
+                    letter-spacing: 0;
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+    }
+
+    /* 380px / 16px = 23.75em */
+    @media only screen and (max-width: 23.75em) {
+        .navbar {
+            &__element {
+                a {
+                    font-size: 1.2rem;
+                    letter-spacing: 0;
+                    padding: 0 0.25rem;
+                }
+            }
+        }
+    }
+}
+

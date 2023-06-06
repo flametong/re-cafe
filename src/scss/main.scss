@@ -1,0 +1,46 @@
+$purple-main: rgb(123, 89, 206);
+$green-main: rgb(49, 196, 141);
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 128rem;
+    box-shadow: 0 0 15px rgba(58,61,66,0.4);
+
+    /* 1000px / 16px = 62.5em */
+    @media only screen and (max-width: 62.5em) {
+        width: 100%;
+    }
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background: $green-main;
+    border: 0.1rem solid $green-main;
+    color: #fff;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #fff;
+        color: $green-main;
+        cursor: pointer;    
+    }
+}
+
+@import 'navbar';
+@import 'header';
+@import 'city-dropdown';
+@import 'food-cards-section';
+@import 'product-page';
+@import 'basket';
+@import 'footer';
