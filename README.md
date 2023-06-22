@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" src="https://github.com/flametong/re-cafe/assets/32167273/0978a493-6915-4ea7-9dbe-8083cc3802c0" alt="main logo">
+  <img width="200" src="https://github.com/flametong/re-cafe/assets/32167273/1fcdaa89-1161-45d1-bfdd-71b6d1f6973d" alt="main logo">
 </p>
 
 ## About the project
@@ -13,9 +13,11 @@ https://re-cafe.vercel.app/
 - Redux Toolkit
 
 ## Screenshots of the Project
-<p align="center">
-  <img src="https://github.com/flametong/re-cafe/assets/32167273/a39b79f0-d103-40e4-b0a7-953edd4e88b4" alt="home page">
-  <img src="https://github.com/flametong/re-cafe/assets/32167273/b59b1198-10c0-46e9-bddd-def7f94426c5" alt="product page">
-  <img src="https://github.com/flametong/re-cafe/assets/32167273/e9e3583e-8aa6-4fad-a9fb-713edb395f41" alt="basket demonstration">
-  <img src="https://github.com/flametong/re-cafe/assets/32167273/c3624053-fbd9-46a1-b0d3-589d51130bbd" alt="adaptive demonstration">
-</p>
+<div align="center">
+  <img src="https://github.com/flametong/re-cafe/assets/32167273/0190bf82-93af-48b5-9bc6-1cbd8872e590" alt="home page">
+  <img src="https://github.com/flametong/re-cafe/assets/32167273/1658adc1-e6cc-48ba-8372-6b15485e1e24" alt="product page">
+  <img src="https://github.com/flametong/re-cafe/assets/32167273/bbd5dfee-ebb8-4da4-804c-44d9e1c85c79" alt="basket demonstration">
+</div>
+<div align="center">
+  <img src="https://github.com/flametong/re-cafe/assets/32167273/e73023cb-a01c-4b74-b592-084c4b2179d6" alt="adaptive demonstration">
+</div>
