@@ -159,7 +159,6 @@
     .promoRow {
         padding-top: 1rem;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-end;
 
@@ -180,12 +179,7 @@
                 /* 450px / 16px = 28.125em */
                 @media only screen and (max-width: 28.125em) {
                     font-size: 1.4rem;
-                    width: 100%;
-                }
-
-                /* 340px / 16px = 21.25em */
-                @media only screen and (max-width: 21.25em) {
-                    margin-bottom: 0.5rem;
+                    width: 95%;
                 }
             }
         }
