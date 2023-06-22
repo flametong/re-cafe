@@ -1,0 +1,40 @@
+@use "../../styles/global/" as *;
+
+.category {
+    display: flex;
+    flex-direction: column;
+    width: 100rem;
+    padding: 2rem 0;
+
+    .header {
+        border-bottom: 0.1rem solid #eee;
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        color: $green-main;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    /* 1000px / 16px = 62.5em */
+    @media only screen and (max-width: 62.5em) {
+        width: 80rem;
+    }
+
+    /* 750px / 16px = 46.875em */
+    @media only screen and (max-width: 46.875em) {
+        width: 55rem;
+    }
+
+    /* 550px / 16px = 34.375em */
+    @media only screen and (max-width: 34.375em) {
+        width: 35rem;
+    }
+}

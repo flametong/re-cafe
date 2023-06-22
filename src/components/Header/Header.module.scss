@@ -1,0 +1,198 @@
+@use "../../styles/global/" as *;
+
+.header {
+    display: flex;
+    width: 100%;
+    padding: 1rem 0 2rem;
+    color: $gray-main;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .row1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .row1Elem1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .logo {
+        width: 20rem;
+        margin-right: 6rem;
+    }
+
+    .telephone {
+        margin-left: 6rem;
+        padding: 0 1rem;
+
+        .number,
+        .title {
+            font-size: $default-font-size;
+        }
+
+        .title {
+            font-weight: normal;
+            color: $gray-main;
+        }
+
+        .number {
+            font-weight: bold;
+            color: $gray-lighter;
+
+            &:hover {
+                color: $gray-lighter;
+                border-bottom: 0.1rem solid $gray-light;
+                cursor: pointer;
+            }
+
+            .regionalNumber {
+                color: $green-main;
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+    .signInBtn {
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        margin-left: 6rem;
+        margin-right: 3rem;
+    }
+
+    .signUpBtn {
+        color: $gray-lighter;
+        font-size: $default-font-size;
+        font-weight: bold;
+        transition: 0.3s;
+
+        &:hover {
+            color: $green-main;
+        }
+    }
+
+    .row2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        .locationIcon {
+            font-size: $default-font-size;
+            color: $gray-main;
+            background-color: $gray-light;
+            padding: 0.8rem 1.2rem;
+        }
+    
+        .address {
+            width: 50rem;
+            font-size: 1.4rem;
+            padding: 0.85rem 1rem;
+            color: $gray-main;
+            border: 0.1rem solid $gray-light;
+            border-left: none;
+    
+            &:focus {
+                outline: 0.1rem solid $gray-light;
+            }
+        }
+    }
+}
+
+/* 1000px / 16px = 62.5em */
+@media only screen and (max-width: 62.5em) {
+    
+    .header {
+        .logo {
+            width: 18rem;
+            margin-right: 3rem;
+        }
+    
+        .telephone {
+            margin-left: 3rem;
+        }
+    
+        .signInBtn {
+            margin-left: 3rem;
+        }
+    }
+}
+
+/* 750px / 16px = 46.875em */
+@media only screen and (max-width: 46.875em) {
+
+    .header {
+        .row1 {
+            flex-direction: column;
+
+            .row1Elem1 {
+                margin-bottom: 1rem;
+                flex-wrap: wrap;
+            }
+        }
+    
+        .logo {
+            margin-right: 0.5rem;
+        }
+    
+        .telephone {
+            margin-left: 0.5rem;
+        }
+    
+        .signInBtn {
+            margin-left: 2rem;
+        }
+        .row2 {
+            .address {
+                width: 50rem;
+            }
+        }
+    }
+}
+
+/* 550px / 16px = 34.375em */
+@media only screen and (max-width: 34.375em) {
+
+    .header {
+        .row1 {
+            flex-direction: column;
+
+            .row1Elem1 {
+                flex-wrap: wrap;
+                margin-bottom: 2rem;
+            }
+        }
+    
+        .logo {
+            width: 15rem;
+            margin-right: 2rem;
+        }
+    
+        .telephone {
+            margin-top: 1rem;
+            margin-left: 0.5rem;
+        }
+    
+        .signInBtn {
+            margin-left: 0;
+        }
+
+        .row2 {
+            .address {
+                width: 80%;
+            }
+        }
+    }
+}

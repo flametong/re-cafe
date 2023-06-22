@@ -1,0 +1,17 @@
+@use "../../styles/global/" as *;
+
+.button {
+    background: $green-main;
+    border: 0.1rem solid $green-main;
+    color: #fff;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #fff;
+        color: $green-main;
+        cursor: pointer;    
+    }
+}

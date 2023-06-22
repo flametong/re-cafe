@@ -1,0 +1,323 @@
+@use "../../styles/global/" as *;
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75rem;
+    color: $gray-main;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 0;
+        
+        .titleContainer {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+
+            .title {
+                font-size: 2.4rem;
+            }
+
+            .description {
+                font-size: 1.8rem;
+                color: $gray-lighter;
+            }
+        }
+
+        .priceContainer {
+            display: flex;
+            align-items: center;
+
+            .price {
+                font-size: 2.6rem;
+                .number {
+                    color: $green-main;
+                    font-weight: bold;
+                    font-size: 2.8rem;
+                }
+            }
+
+            .productBtn {
+                padding: 0.5rem 2rem;
+                letter-spacing: 0.1rem;
+                margin-left: 3rem;
+            }
+        }
+    }
+
+    .img {
+        width: 100%;
+        height: 37.5rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 2rem 0;
+        border-bottom: 0.3rem solid #eff2ed;
+
+        .productDescriptionFull {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            font-size: $default-font-size;
+            color: $gray-lighter;
+        }
+
+        .productExtraInfo {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .col1 {
+                width: 30rem;
+
+                .weightContainer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 2.2rem;
+                    padding: 2rem 0;
+                    border-bottom: 0.3rem solid #eff2ed;
+
+                    .weightVal {
+                        color: $green-main;
+                        font-weight: bold;
+                        font-size: 2.4rem;
+                    }
+                }
+
+                .energyContainer {
+                    @extend .weightContainer;
+                    
+                    .energyVal {
+                        @extend .weightVal;
+                    }
+                }
+
+                .nutritionalTitle {
+                    color: $gray-lighter;
+                    font-size: 2.2rem;
+                    padding: 2rem 0;
+                    border-bottom: 0.3rem solid $green-main;
+                }
+
+                .proteinsContainer,
+                .fatsContainer,
+                .carbsContainer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem 0;
+                    font-size: $default-font-size;
+                    border-bottom: 0.2rem solid #eff2ed;
+
+                    .title {
+                        color: $gray-lighter;
+                    }
+                }
+
+                .carbsContainer {
+                    border: none;
+                }
+
+                .desktop_hide {
+                    @extend .weightContainer;
+                    display: none;
+                    
+                    .energyPortionVal {
+                        @extend .weightVal;
+                    }
+                }
+            }
+
+            .col2 {
+                display: flex;
+                flex-direction: column;
+                width: 30rem;
+
+                .energyPortionContainer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 2.2rem;
+                    padding: 2rem 0;
+                    border-bottom: 0.3rem solid #eff2ed;
+
+                    .energyPortionVal {
+                        color: $green-main;
+                        font-weight: bold;
+                        font-size: 2.4rem;
+                        padding-left: 0.5rem;
+                    }
+                }
+
+                .ingredientsContainer {
+                    .title {
+                        color: $gray-lighter;
+                        font-size: 2.2rem;
+                        padding: 2rem 0;
+                        border-bottom: 0.3rem solid #eff2ed;
+                    }
+    
+                    .val {
+                        padding: 2rem 0;
+                        color: $gray-lighter;
+                        font-size: $default-font-size;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 0;
+        font-size: 2.2rem;
+
+        .quantityContainer {
+            display: flex;
+            align-items: center;
+
+            .interaction {
+                display: flex;
+                align-items: center;
+                margin-left: 4rem;
+
+                .btn {
+                    width: 5rem;
+                    height: 5rem;
+                    padding: 0;
+                    text-align: center;
+                    color: $green-main;
+                    border-radius: 0;
+                    background-color: #fff;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: $green-main;
+                    }
+                }
+
+                .val {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 5rem;
+                    height: 5rem;
+                    background-color: #fff;
+                    border-top: 0.1rem solid $green-main;
+                    border-bottom: 0.1rem solid $green-main;
+                }
+            }
+        }
+
+        .priceContainer {
+            display: flex;
+            align-items: center;
+
+            .price {
+                font-size: 2.2rem;
+                .number {
+                    color: $green-main;
+                    font-weight: bold;
+                    font-size: 2.4rem;
+                }
+            }
+
+            .btn {
+                font-size: $default-font-size;
+                padding: 1rem 3rem;
+                letter-spacing: 0.1rem;
+                margin-left: 4rem;
+            }
+        }
+    }
+}
+
+/* 750px / 16px = 46.875em */
+@media only screen and (max-width: 46.875em) {
+    .product {
+        width: 55rem;
+
+        .main {
+            .productExtraInfo {
+                flex-direction: column;
+                align-items: center;
+
+                .col1,
+                .col2 {
+                    width: 100%;
+                }
+
+                /* 
+                *** show hidden container
+                *** when col-1 and col-2
+                *** merged into one column
+                */
+                .col1 {
+                    .desktop_hide {
+                        display: flex;
+                    }
+                }
+
+                .col2 {
+                    .energyPortionContainer {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            .quantityContainer {
+                .interaction {
+                    margin-left: 2rem;
+                }
+            }
+
+            .priceContainer {
+                .btn {
+                    margin-left: 2rem; 
+                }
+            }
+        }
+    }
+}
+
+/* 550px / 16px = 34.375em */
+@media only screen and (max-width: 34.375em) {
+    .product {
+        width: 32rem;
+
+        .img {
+            height: 30rem;
+        }
+
+        .footer {
+            flex-direction: column;
+
+            .quantityContainer,
+            .priceContainer {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .priceContainer {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

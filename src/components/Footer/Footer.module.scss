@@ -1,0 +1,101 @@
+@use "../../styles/global/" as *;
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-top: 0.1rem solid #eff2ed;
+    font-size: 1.8rem;
+    padding: 4rem 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        width: 100rem;
+    }
+
+    .col {
+        color: $gray-main;
+    }
+
+    ul > li {
+        margin: 0.2rem 0;
+    }
+
+    .link {
+        color: $gray-main;
+        
+        &:hover {
+            border-bottom: 0.1rem solid $gray-lighter;
+        }
+    }
+
+    .logo {
+        width: 20rem;
+    }
+
+    .telephone {
+        .number,
+        .title {
+            font-size: $default-font-size;
+        }
+
+        .title {
+            font-weight: normal;
+            color: $gray-main;
+        }
+
+        .number {
+            font-weight: bold;
+            color: $gray-lighter;
+
+            &:hover {
+                color: $gray-lighter;
+                border-bottom: 0.1rem solid $gray-light;
+                cursor: pointer;
+            }
+
+            .regionalNumber {
+                color: $green-main;
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+/* 1000px / 16px = 62.5em */
+@media only screen and (max-width: 62.5em) {
+    .footer {
+        .container {
+            width: 80rem;
+            align-items: flex-start;
+            font-size: 1.4rem;
+        }
+    
+        .col {
+            margin: 0 1rem;
+        }
+    }
+}
+
+/* 750px / 16px = 46.875em */
+@media only screen and (max-width: 46.875em) {
+    .footer {
+        padding: 1rem 0;
+        
+        .container {
+            flex-direction: column;
+            width: 23.5rem;
+            align-items: flex-start;
+            font-size: $default-font-size;
+        }
+
+        .col {
+            padding: 1rem 0;
+        }
+
+        .logo {
+            width: 20rem;
+        }
+    }
+}
